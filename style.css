@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+	background-color: #a39c9c; 
+
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#tiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tile1, .tile2, .tile3 {
+    border: 1px solid #ccc;
+    padding: 20px;
+    cursor: pointer;
+    transition: height 0.3s ease;
+    width: 300px;
+    margin: 10px;
+	margin-top: 200px;
+    background-color: #f0f0f0;
+}
+
+.tile1 h2 {
+    color: #007bff;
+}
+
+.tile2 h2 {
+    color: #ff6347;
+}
+
+.tile3 h2 {
+    color: #4caf50;
+}
+
+.tile1 p, .tile2 p, .tile3 p {
+    display: none;
+    margin: 0;
+}
+
+.tile1:hover .read-more, .tile2:hover .read-more, .tile3:hover .read-more {
+    display: block;
+}
+
+.tile1.expanded {
+    height: auto;
+}
+
+.tile2.expanded {
+    height: auto;
+}
+
+.tile3.expanded {
+    height: auto;
+}
+.tile1.expanded p{
+    display: block;
+}
+
+.tile2.expanded p{
+    display: block;
+}
+.tile3.expanded p{
+    display: block;
+}
+
+.tile2 {
+    width: 400px;
+}
+
+@media screen and (max-width: 768px) {
+    .tile1, .tile2, .tile3 {
+        width: 100%;
+    }
+}
